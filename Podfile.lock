@@ -1,0 +1,33 @@
+PODS:
+  - iOSDFULibrary (4.4.2):
+    - ZIPFoundation (= 0.9.9)
+  - TTLock (3.1.8)
+  - TTLockDFU (3.1.8):
+    - iOSDFULibrary (~> 4.4.2)
+    - TTLock
+  - TTLockGateway (3.0.1)
+  - ZIPFoundation (0.9.9)
+
+DEPENDENCIES:
+  - TTLock
+  - TTLockDFU
+  - TTLockGateway
+
+SPEC REPOS:
+  trunk:
+    - iOSDFULibrary
+    - TTLock
+    - TTLockDFU
+    - TTLockGateway
+    - ZIPFoundation
+
+SPEC CHECKSUMS:
+  iOSDFULibrary: 7f25ff33edd65f7d23bf6ebe4827723509ac091b
+  TTLock: fe9754b4cdbd1fdd3e34a8abd4f8f1faa921aacd
+  TTLockDFU: 0e86b6a1d630c210ba93c4bf480c03731b42ab79
+  TTLockGateway: 470290cc58729da7a5cbf02257da1c7494638061
+  ZIPFoundation: 89df685c971926b0323087952320bdfee9f0b6ef
+
+PODFILE CHECKSUM: a3ca61ce2808002232579c2459ded09efdb317ca
+
+COCOAPODS: 1.10.1

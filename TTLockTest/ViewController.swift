@@ -12,7 +12,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         TTLock.startScan({ a in
-            print(a?.lockName)
+            print(a.debugDescription)
         })
         // Do any additional setup after loading the view.
     }

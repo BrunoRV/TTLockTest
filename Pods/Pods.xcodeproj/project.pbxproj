@@ -1,0 +1,1336 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXAggregateTarget section */
+		385CF08F4762A2AB188DA5D978366706 /* TTLockGateway */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 6564A5311DA80E78D43B74D086FFC620 /* Build configuration list for PBXAggregateTarget "TTLockGateway" */;
+			buildPhases = (
+			);
+			dependencies = (
+			);
+			name = TTLockGateway;
+		};
+		4F7A0364FB6F5FA593A14A7B501F0CA7 /* TTLock */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 330941B3A0E504B6076697A5EC88E12A /* Build configuration list for PBXAggregateTarget "TTLock" */;
+			buildPhases = (
+			);
+			dependencies = (
+			);
+			name = TTLock;
+		};
+		B0FBA311DF80A71D26255035CD6DECCE /* TTLockDFU */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 06C4E713DB6DFAAF9F84C5DBDE1DB6B3 /* Build configuration list for PBXAggregateTarget "TTLockDFU" */;
+			buildPhases = (
+			);
+			dependencies = (
+				7942C4DB0D851C42D0ED120BE678BDBE /* PBXTargetDependency */,
+				AEA16DE082D081C3F073D8A1111794C4 /* PBXTargetDependency */,
+			);
+			name = TTLockDFU;
+		};
+/* End PBXAggregateTarget section */
+
+/* Begin PBXBuildFile section */
+		04277B42919182C09B68EAA05C91DCF7 /* LegacyDFUPeripheralDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F777D97C1497A07ADDCC5CDCA134B9D /* LegacyDFUPeripheralDelegate.swift */; };
+		0734EB3B977FC45EC8EA2CA53442072B /* DFUStreamZip.swift in Sources */ = {isa = PBXBuildFile; fileRef = F211E052E5A60B65BC9A3D5D5399E316 /* DFUStreamZip.swift */; };
+		0FE97B353A93B3CE22EDA6AECCC0346D /* Double.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71DBE3B7B78B0D26DBC153535DE1F053 /* Double.swift */; };
+		11A2B3A102A61971545E4D1AAFFC80B0 /* Pods-TTLockTest-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 32081C883EB514E3368F50AD98904DE2 /* Pods-TTLockTest-dummy.m */; };
+		11AE01D6D2EF46CE1733F2ED56AC8D67 /* DFUServiceInitiator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC27E069DF92B6E554E364895E5832A5 /* DFUServiceInitiator.swift */; };
+		14BAF4EB910A24E9484FD10AF0A4A3ED /* LegacyDFUService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC4ED81D5A1157A4CE9073375E9BA60B /* LegacyDFUService.swift */; };
+		157750DD797753253192113C1C3B70EA /* DFUCharacteristic.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9271A1AA0CB11B701B0342D874180CE /* DFUCharacteristic.swift */; };
+		17EE94555F96AFD6016F0396A5C73B6A /* Data+Serialization.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0F5B9C2BAC3828AE5EEC95ED7F4361B /* Data+Serialization.swift */; };
+		241D8F56443833A289DEACF772B1F871 /* LegacyDFUExecutor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FA48CEBD8D20DEF6C8DD0EF26C75EEC /* LegacyDFUExecutor.swift */; };
+		25843BA23E68CB754449EF08A3FDB92E /* SecureDFUPeripheral.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96AEDFC1FD10396F2303CB4C0F606F56 /* SecureDFUPeripheral.swift */; };
+		2809DA2C596EAF158CF5D4BE3B796E6E /* SecureDFUPeripheralDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51E6D2719920AD54780B7078418E3CBF /* SecureDFUPeripheralDelegate.swift */; };
+		2CEA4C92CD32A77DD26F5BE5B970FD74 /* DFUStreamHex.swift in Sources */ = {isa = PBXBuildFile; fileRef = F740E88F543D9E3FAFB9772B0A211775 /* DFUStreamHex.swift */; };
+		2DE48E98690CE04A38A2E7FFC008AFA1 /* DFUServiceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09FEAB598EEAA34DB35B1325BCB1D3B7 /* DFUServiceController.swift */; };
+		318637D031E0E7C749D98FA47E0E31CC /* DFUVersion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BAD4B1CE4C9F27353112F6C02B727AC /* DFUVersion.swift */; };
+		358B27D243FF5B232BF15E833779961D /* ZIPFoundation-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B974452DF1D6D3AB0CE29947E23EE100 /* ZIPFoundation-dummy.m */; };
+		374C10097D335A3DD1274EC9B37F5B6A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1D901AA780D482D47459D2C3828C658 /* Foundation.framework */; };
+		385F543E58054FCC2180E6DFBED4AA35 /* ZIPFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5ACB827D79A4558F979CA1F5CDBD95B4 /* ZIPFoundation.framework */; };
+		3ACB5C8D793557136C8AA1A4656551ED /* LegacyDFUPeripheral.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A2F5352EF4D761F5A2AA2D0F8CD42C4 /* LegacyDFUPeripheral.swift */; };
+		3EB2FF059F4E92FF1BE0FF159FA6CDA0 /* SecureDFUPacket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78C94289DEB3139985389BF53A9D7DDC /* SecureDFUPacket.swift */; };
+		41DE26345FC99F2B85890E45899B0C93 /* LegacyDFUServiceInitiator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 176BC269D4DEA679B33FEE26098EEDA4 /* LegacyDFUServiceInitiator.swift */; };
+		424630D483F72393DF235A8B432D7F76 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1D901AA780D482D47459D2C3828C658 /* Foundation.framework */; };
+		4520347DF857FCC71634485158F2509E /* DFUStreamBin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C55188A35B1967F53C42936AD0C427C /* DFUStreamBin.swift */; };
+		481B5A837AEE7381028862E2DB271783 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1D901AA780D482D47459D2C3828C658 /* Foundation.framework */; };
+		496D6CC78ED6FC552374A9FC20166F7D /* Archive.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51443A992F52FCCF25525BE4E19956B7 /* Archive.swift */; };
+		4E58FAACBB5E0F5F262AA6DB99986AC5 /* DFUStream.swift in Sources */ = {isa = PBXBuildFile; fileRef = 101D6EB5F7CCF58C8BFB1B6F3BBA9F43 /* DFUStream.swift */; };
+		51454BE424498D96A82ACC3649CFA217 /* Manifest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0601D99021B8E1268B79EF139625AB8F /* Manifest.swift */; };
+		5198E50B343D23609D8856664388D368 /* ZIPFoundation-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 25F9D9316CD70909FDA4540A514563C1 /* ZIPFoundation-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		52B7D3BB8833369CA20DD8A27C147210 /* Archive+Reading.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5985C6BCCBD40B4806F9E26D3DAADC7E /* Archive+Reading.swift */; };
+		53CDC9B11AE11A18D5595CA29AD88FD7 /* crc32.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97259A9F82F1FB135FDBDAED05808E02 /* crc32.swift */; };
+		5E22189B30F340CD4A1B231627D8428F /* DFUController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C7F1618552F435030BB340A785BAB7E /* DFUController.swift */; };
+		5E89A2E4FE41E0EE9BA4A231C69A90AD /* SecureDFUServiceInitiator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 101A780AD17343282678180836A7C3F0 /* SecureDFUServiceInitiator.swift */; };
+		62C050783AE9FC654AB2FA7FCE84BEBA /* IntelHex2BinConverter.h in Headers */ = {isa = PBXBuildFile; fileRef = 43EE6B70C02230038A301983815DD6B9 /* IntelHex2BinConverter.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		65C43BF06212C97ADC1F489978BF33E3 /* FileManager+ZIP.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D92D7F471D71B9C83C044BF15A0B12F /* FileManager+ZIP.swift */; };
+		73F4C96F66AE390C3137D8FA0BB3654A /* SecureDFUService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44DDB871C2C775D61D5F30236CC56672 /* SecureDFUService.swift */; };
+		7CDADD41594A4ABD69C12F00970295E0 /* Entry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94C1827874F57C3DEE3F522B9F14FD7D /* Entry.swift */; };
+		7D715D8E210AE4B2BDADA399DC533AE3 /* IntelHex2BinConverter.m in Sources */ = {isa = PBXBuildFile; fileRef = 674339360A4D9400B37F6B1996AFE8D3 /* IntelHex2BinConverter.m */; };
+		89CBEE8E3F8423378066F52A8CEB1465 /* ButtonlessDFU.swift in Sources */ = {isa = PBXBuildFile; fileRef = BACA9DCD5026224CF83E6145BA4055A4 /* ButtonlessDFU.swift */; };
+		8D31BCC84301263D921E4EDC0C8B9DF9 /* DFUPacket.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1767944A03AA09F7BAFC1188A2C41D9 /* DFUPacket.swift */; };
+		9715FADED3A8399212B2C2C47C626209 /* DFUExecutor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EEA89B86FCDA99A155AF6F845DC9652 /* DFUExecutor.swift */; };
+		9E916C0552800996D5FD7487C4578B9C /* SecureDFUExecutor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93C6A61FA88561D5BC35BB68FC65813B /* SecureDFUExecutor.swift */; };
+		A846A5D762C13B73F2E001317DF1257F /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE23BF698C24887A3B61AFE9215E4143 /* Data.swift */; };
+		AD7772F4E3037E5D82462177CF4C4F4B /* DFUUuidHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 714169AAA9994DDCC25EF204C8A199E9 /* DFUUuidHelper.swift */; };
+		ADB342F309ABEF60B5D1901333CB1E74 /* DFUService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B552A1B8E359752332330C05EA27F5CD /* DFUService.swift */; };
+		AEDA5B3E9C45E08E1D5832ACD17F00F0 /* DFUServiceDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8D6E492EB3FDDB4AAE1598EA8D1A34B /* DFUServiceDelegate.swift */; };
+		B12BA8AF195AA250BC1BBCD528BB774E /* ZipArchive.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87E5075F808FE2FDBB136137F7B580AA /* ZipArchive.swift */; };
+		B253682649DF63773092631BA508083B /* ManifestFirmwareInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = C36AA3B15C88FBF01117F5B91C504C19 /* ManifestFirmwareInfo.swift */; };
+		B471A7CD166E80B60D96881815DF6D44 /* LoggerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE69ADD90B99DD3BE21FD850FBB119C5 /* LoggerDelegate.swift */; };
+		B69BB3C6EEF537AA02600EE84630A193 /* DFUStarterPeripheral.swift in Sources */ = {isa = PBXBuildFile; fileRef = D904BD1DEFDDA4AC915662368DCADCE1 /* DFUStarterPeripheral.swift */; };
+		BDD5A48BA4CD7C083CFD2939FAAF2934 /* SoftdeviceBootloaderInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD607709C6DB424DEEC4193F60192856 /* SoftdeviceBootloaderInfo.swift */; };
+		BE2724E8C0ED6C2DE3840CDE5D7E7265 /* Pods-TTLockTest-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 5D503543C1B27A4DFF6E79D276C4C2A0 /* Pods-TTLockTest-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D1ADC22EBBEC51760F1F587F10A0EA8C /* iOSDFULibrary-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 0A084B1F4B8AF7DDCE04ECAC36AE07A2 /* iOSDFULibrary-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D901B3258F5F9665D481A3CA4B6A1CC7 /* LoggerHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = D25A4955E204037A839485D08BCBA537 /* LoggerHelper.swift */; };
+		DFA66F0E0E99A421C7283F0F3D0CA422 /* DFUPeripheralDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D26CA87736176D229038BCEC3A9D760 /* DFUPeripheralDelegate.swift */; };
+		DFF190177FB5802B0E49034058D75DF9 /* DFUServiceSelector.swift in Sources */ = {isa = PBXBuildFile; fileRef = C64DD01FB9E50EC3F68CA320F5A41393 /* DFUServiceSelector.swift */; };
+		E1A03A005F01190807BA3CCD862BD2B0 /* DFUFirmware.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B1626C4E33F6DFDBCB1E4BED555873B /* DFUFirmware.swift */; };
+		F0F40F6EF75B6CA13B5483136E764114 /* DFUPeripheral.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D06AC11391B863B61FA98BF761F171C /* DFUPeripheral.swift */; };
+		F14FE3E202F0F171955AE16CCFA213E6 /* SecureDFUControlPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2CE7E05EF10597FEBCD01325F028A3F /* SecureDFUControlPoint.swift */; };
+		F1836A31D73C2B0DBF52DBEE34E4DD45 /* DFUPeripheralSelectorDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10859382374E6EB70144832CDF8AEC19 /* DFUPeripheralSelectorDelegate.swift */; };
+		F21EF813D2A8F2CEEAADFC6B40C15C1A /* DFUControlPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB68B1ADAD67973000DEC2C7F1F14070 /* DFUControlPoint.swift */; };
+		F48E5712CD324A9CB62F7A4CD0D7E70E /* DFUPeripheralSelector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 891749F934770CDB4914573F6CE4B903 /* DFUPeripheralSelector.swift */; };
+		FA50F624F213960911CC71221CD95F06 /* Data+Compression.swift in Sources */ = {isa = PBXBuildFile; fileRef = E06E1899BB713BC1B3088E9B179BB3D4 /* Data+Compression.swift */; };
+		FDE1874AF6EB7678BBE6770BBDE5CB1F /* iOSDFULibrary-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C4728402EBE64781565603C8BAB3382 /* iOSDFULibrary-dummy.m */; };
+		FE5E7F7C9D43D8F6795EC71DB0F3FC93 /* Archive+Writing.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7C4E7F75F4B215C8DE93F3D1032C1EC /* Archive+Writing.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		2615629C667B748FB71999D79410E04C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 385CF08F4762A2AB188DA5D978366706;
+			remoteInfo = TTLockGateway;
+		};
+		4CC78CC7CF6B7A82A8F836374E5C35A1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4F7A0364FB6F5FA593A14A7B501F0CA7;
+			remoteInfo = TTLock;
+		};
+		65D9E40569F5A76309CC825AE01C5A82 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B0FBA311DF80A71D26255035CD6DECCE;
+			remoteInfo = TTLockDFU;
+		};
+		68FCF9EB7A983118B6516B8F616E151D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9506C7FCDAE6E6967A99655F452EEE93;
+			remoteInfo = iOSDFULibrary;
+		};
+		7350FE4A1E721E30CB5444E56844823E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4F7A0364FB6F5FA593A14A7B501F0CA7;
+			remoteInfo = TTLock;
+		};
+		84CA9CEBBE6E9EB3D891C62B9D6B258C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AA15C8469D67684160CC2A7098EB841C;
+			remoteInfo = ZIPFoundation;
+		};
+		C7D5D31D0E911F83EB97B561697E7440 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9506C7FCDAE6E6967A99655F452EEE93;
+			remoteInfo = iOSDFULibrary;
+		};
+		E2146C7CDD6D284D06AD96E9FD0AF50F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AA15C8469D67684160CC2A7098EB841C;
+			remoteInfo = ZIPFoundation;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		053A0609188F566539D1EEBE05426D7B /* Pods_TTLockTest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_TTLockTest.framework; path = "Pods-TTLockTest.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		0601D99021B8E1268B79EF139625AB8F /* Manifest.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Manifest.swift; path = iOSDFULibrary/Classes/Utilities/DFUPackage/Manifest/Manifest.swift; sourceTree = "<group>"; };
+		07A60A94C3DC2E3531B0F7335F7C888A /* TTLockGateway.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = TTLockGateway.framework; path = TTLockFrameworks/TTLockGateway.framework; sourceTree = "<group>"; };
+		09FEAB598EEAA34DB35B1325BCB1D3B7 /* DFUServiceController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DFUServiceController.swift; path = iOSDFULibrary/Classes/Implementation/DFUServiceController.swift; sourceTree = "<group>"; };
+		0A084B1F4B8AF7DDCE04ECAC36AE07A2 /* iOSDFULibrary-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "iOSDFULibrary-umbrella.h"; sourceTree = "<group>"; };
+		0C4728402EBE64781565603C8BAB3382 /* iOSDFULibrary-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "iOSDFULibrary-dummy.m"; sourceTree = "<group>"; };
+		0D26CA87736176D229038BCEC3A9D760 /* DFUPeripheralDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DFUPeripheralDelegate.swift; path = iOSDFULibrary/Classes/Implementation/GenericDFU/DFUPeripheralDelegate.swift; sourceTree = "<group>"; };
+		0EF4505A17238C97FA7F483C9F1E42FC /* Pods-TTLockTest-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-TTLockTest-acknowledgements.markdown"; sourceTree = "<group>"; };
+		101A780AD17343282678180836A7C3F0 /* SecureDFUServiceInitiator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SecureDFUServiceInitiator.swift; path = iOSDFULibrary/Classes/Implementation/SecureDFU/DFU/SecureDFUServiceInitiator.swift; sourceTree = "<group>"; };
+		101D6EB5F7CCF58C8BFB1B6F3BBA9F43 /* DFUStream.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DFUStream.swift; path = iOSDFULibrary/Classes/Utilities/Streams/DFUStream.swift; sourceTree = "<group>"; };
+		10859382374E6EB70144832CDF8AEC19 /* DFUPeripheralSelectorDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DFUPeripheralSelectorDelegate.swift; path = iOSDFULibrary/Classes/Implementation/DFUPeripheralSelectorDelegate.swift; sourceTree = "<group>"; };
+		16F8936A23F86344CBF47C45D2B2F7F4 /* TTLock.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = TTLock.debug.xcconfig; sourceTree = "<group>"; };
+		176BC269D4DEA679B33FEE26098EEDA4 /* LegacyDFUServiceInitiator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LegacyDFUServiceInitiator.swift; path = iOSDFULibrary/Classes/Implementation/LegacyDFU/DFU/LegacyDFUServiceInitiator.swift; sourceTree = "<group>"; };
+		17700F417ADB50407281638E8BA91254 /* Pods-TTLockTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TTLockTest.debug.xcconfig"; sourceTree = "<group>"; };
+		1F777D97C1497A07ADDCC5CDCA134B9D /* LegacyDFUPeripheralDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LegacyDFUPeripheralDelegate.swift; path = iOSDFULibrary/Classes/Implementation/LegacyDFU/Peripherals/LegacyDFUPeripheralDelegate.swift; sourceTree = "<group>"; };
+		21B1375088A0310C7AE2BE4C8188D12F /* iOSDFULibrary.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = iOSDFULibrary.framework; path = iOSDFULibrary.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		24DAE374374862A4A37ECA7DE1EE2168 /* TTLockDFU.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = TTLockDFU.release.xcconfig; sourceTree = "<group>"; };
+		25F9D9316CD70909FDA4540A514563C1 /* ZIPFoundation-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ZIPFoundation-umbrella.h"; sourceTree = "<group>"; };
+		29EF1F2FE9EEC59AE9A267AE5F3C6BB3 /* ZIPFoundation.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = ZIPFoundation.modulemap; sourceTree = "<group>"; };
+		2A7A86651FB8522D131DD1F3AC14F84B /* iOSDFULibrary-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "iOSDFULibrary-prefix.pch"; sourceTree = "<group>"; };
+		2BAD4B1CE4C9F27353112F6C02B727AC /* DFUVersion.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DFUVersion.swift; path = iOSDFULibrary/Classes/Implementation/LegacyDFU/Characteristics/DFUVersion.swift; sourceTree = "<group>"; };
+		32081C883EB514E3368F50AD98904DE2 /* Pods-TTLockTest-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-TTLockTest-dummy.m"; sourceTree = "<group>"; };
+		3765DD80CF977ACCBFC9602C4A46D309 /* ZIPFoundation-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ZIPFoundation-prefix.pch"; sourceTree = "<group>"; };
+		3D55A22413DFC1D0635D68C2F1D2CDC1 /* TTLock.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = TTLock.framework; path = TTLockFrameworks/TTLock.framework; sourceTree = "<group>"; };
+		3FA48CEBD8D20DEF6C8DD0EF26C75EEC /* LegacyDFUExecutor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LegacyDFUExecutor.swift; path = iOSDFULibrary/Classes/Implementation/LegacyDFU/DFU/LegacyDFUExecutor.swift; sourceTree = "<group>"; };
+		43EE6B70C02230038A301983815DD6B9 /* IntelHex2BinConverter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IntelHex2BinConverter.h; path = iOSDFULibrary/Classes/Utilities/HexToBinConverter/IntelHex2BinConverter.h; sourceTree = "<group>"; };
+		44DDB871C2C775D61D5F30236CC56672 /* SecureDFUService.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SecureDFUService.swift; path = iOSDFULibrary/Classes/Implementation/SecureDFU/Services/SecureDFUService.swift; sourceTree = "<group>"; };
+		48A4A6EDC08C8AC933D0DCD507E9D173 /* ZIPFoundation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = ZIPFoundation.framework; path = ZIPFoundation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4C7F1618552F435030BB340A785BAB7E /* DFUController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DFUController.swift; path = iOSDFULibrary/Classes/Implementation/GenericDFU/DFUController.swift; sourceTree = "<group>"; };
+		51443A992F52FCCF25525BE4E19956B7 /* Archive.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Archive.swift; path = Sources/ZIPFoundation/Archive.swift; sourceTree = "<group>"; };
+		51E6D2719920AD54780B7078418E3CBF /* SecureDFUPeripheralDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SecureDFUPeripheralDelegate.swift; path = iOSDFULibrary/Classes/Implementation/SecureDFU/Peripheral/SecureDFUPeripheralDelegate.swift; sourceTree = "<group>"; };
+		5985C6BCCBD40B4806F9E26D3DAADC7E /* Archive+Reading.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Archive+Reading.swift"; path = "Sources/ZIPFoundation/Archive+Reading.swift"; sourceTree = "<group>"; };
+		5A2F5352EF4D761F5A2AA2D0F8CD42C4 /* LegacyDFUPeripheral.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LegacyDFUPeripheral.swift; path = iOSDFULibrary/Classes/Implementation/LegacyDFU/Peripherals/LegacyDFUPeripheral.swift; sourceTree = "<group>"; };
+		5ACB827D79A4558F979CA1F5CDBD95B4 /* ZIPFoundation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ZIPFoundation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5D503543C1B27A4DFF6E79D276C4C2A0 /* Pods-TTLockTest-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-TTLockTest-umbrella.h"; sourceTree = "<group>"; };
+		6165CC5908CC645B8030835881AAB8A6 /* iOSDFULibrary-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "iOSDFULibrary-Info.plist"; sourceTree = "<group>"; };
+		674339360A4D9400B37F6B1996AFE8D3 /* IntelHex2BinConverter.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = IntelHex2BinConverter.m; path = iOSDFULibrary/Classes/Utilities/HexToBinConverter/IntelHex2BinConverter.m; sourceTree = "<group>"; };
+		714169AAA9994DDCC25EF204C8A199E9 /* DFUUuidHelper.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DFUUuidHelper.swift; path = iOSDFULibrary/Classes/Implementation/DFUUuidHelper.swift; sourceTree = "<group>"; };
+		71B4D7BA459DB4D69959D9D9034D758C /* TTLockDFU.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = TTLockDFU.framework; path = TTLockFrameworks/TTLockDFU.framework; sourceTree = "<group>"; };
+		71DBE3B7B78B0D26DBC153535DE1F053 /* Double.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Double.swift; path = iOSDFULibrary/Classes/Utilities/Double.swift; sourceTree = "<group>"; };
+		78C94289DEB3139985389BF53A9D7DDC /* SecureDFUPacket.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SecureDFUPacket.swift; path = iOSDFULibrary/Classes/Implementation/SecureDFU/Characteristics/SecureDFUPacket.swift; sourceTree = "<group>"; };
+		7B1626C4E33F6DFDBCB1E4BED555873B /* DFUFirmware.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DFUFirmware.swift; path = iOSDFULibrary/Classes/Implementation/Firmware/DFUFirmware.swift; sourceTree = "<group>"; };
+		7C0FE407A97AD37147BDEE624DF189FA /* Pods-TTLockTest.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-TTLockTest.modulemap"; sourceTree = "<group>"; };
+		7D06AC11391B863B61FA98BF761F171C /* DFUPeripheral.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DFUPeripheral.swift; path = iOSDFULibrary/Classes/Implementation/GenericDFU/DFUPeripheral.swift; sourceTree = "<group>"; };
+		7D92D7F471D71B9C83C044BF15A0B12F /* FileManager+ZIP.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "FileManager+ZIP.swift"; path = "Sources/ZIPFoundation/FileManager+ZIP.swift"; sourceTree = "<group>"; };
+		7EDD3213F4AFA0B842131A0127F023EF /* iOSDFULibrary.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = iOSDFULibrary.modulemap; sourceTree = "<group>"; };
+		87E5075F808FE2FDBB136137F7B580AA /* ZipArchive.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ZipArchive.swift; path = iOSDFULibrary/Classes/Utilities/ZipArchive.swift; sourceTree = "<group>"; };
+		891749F934770CDB4914573F6CE4B903 /* DFUPeripheralSelector.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DFUPeripheralSelector.swift; path = iOSDFULibrary/Classes/Implementation/DFUPeripheralSelector.swift; sourceTree = "<group>"; };
+		8F65884AB56DF6AD64084AB345AC7840 /* iOSDFULibrary.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = iOSDFULibrary.release.xcconfig; sourceTree = "<group>"; };
+		93C6A61FA88561D5BC35BB68FC65813B /* SecureDFUExecutor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SecureDFUExecutor.swift; path = iOSDFULibrary/Classes/Implementation/SecureDFU/DFU/SecureDFUExecutor.swift; sourceTree = "<group>"; };
+		94C1827874F57C3DEE3F522B9F14FD7D /* Entry.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Entry.swift; path = Sources/ZIPFoundation/Entry.swift; sourceTree = "<group>"; };
+		96AEDFC1FD10396F2303CB4C0F606F56 /* SecureDFUPeripheral.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SecureDFUPeripheral.swift; path = iOSDFULibrary/Classes/Implementation/SecureDFU/Peripheral/SecureDFUPeripheral.swift; sourceTree = "<group>"; };
+		97259A9F82F1FB135FDBDAED05808E02 /* crc32.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = crc32.swift; path = iOSDFULibrary/Classes/Utilities/crc32.swift; sourceTree = "<group>"; };
+		98E6F41EFDB7FF8CA8D19C20CE96FFED /* TTLockGateway.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = TTLockGateway.debug.xcconfig; sourceTree = "<group>"; };
+		99245A603D2E624D0D26EA034B7BAAC9 /* ZIPFoundation.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = ZIPFoundation.debug.xcconfig; sourceTree = "<group>"; };
+		996425FE603AA7F6DA8C71059A2B1122 /* iOSDFULibrary.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = iOSDFULibrary.debug.xcconfig; sourceTree = "<group>"; };
+		9C55188A35B1967F53C42936AD0C427C /* DFUStreamBin.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DFUStreamBin.swift; path = iOSDFULibrary/Classes/Utilities/Streams/DFUStreamBin.swift; sourceTree = "<group>"; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9EEA89B86FCDA99A155AF6F845DC9652 /* DFUExecutor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DFUExecutor.swift; path = iOSDFULibrary/Classes/Implementation/GenericDFU/DFUExecutor.swift; sourceTree = "<group>"; };
+		A38B06342A32795C41071925E3E58386 /* TTLock.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = TTLock.release.xcconfig; sourceTree = "<group>"; };
+		A9271A1AA0CB11B701B0342D874180CE /* DFUCharacteristic.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DFUCharacteristic.swift; path = iOSDFULibrary/Classes/Implementation/GenericDFU/DFUCharacteristic.swift; sourceTree = "<group>"; };
+		B0F5B9C2BAC3828AE5EEC95ED7F4361B /* Data+Serialization.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Data+Serialization.swift"; path = "Sources/ZIPFoundation/Data+Serialization.swift"; sourceTree = "<group>"; };
+		B1767944A03AA09F7BAFC1188A2C41D9 /* DFUPacket.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DFUPacket.swift; path = iOSDFULibrary/Classes/Implementation/LegacyDFU/Characteristics/DFUPacket.swift; sourceTree = "<group>"; };
+		B552A1B8E359752332330C05EA27F5CD /* DFUService.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DFUService.swift; path = iOSDFULibrary/Classes/Implementation/GenericDFU/DFUService.swift; sourceTree = "<group>"; };
+		B7C4E7F75F4B215C8DE93F3D1032C1EC /* Archive+Writing.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Archive+Writing.swift"; path = "Sources/ZIPFoundation/Archive+Writing.swift"; sourceTree = "<group>"; };
+		B974452DF1D6D3AB0CE29947E23EE100 /* ZIPFoundation-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "ZIPFoundation-dummy.m"; sourceTree = "<group>"; };
+		BACA9DCD5026224CF83E6145BA4055A4 /* ButtonlessDFU.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ButtonlessDFU.swift; path = iOSDFULibrary/Classes/Implementation/SecureDFU/Characteristics/ButtonlessDFU.swift; sourceTree = "<group>"; };
+		BB68B1ADAD67973000DEC2C7F1F14070 /* DFUControlPoint.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DFUControlPoint.swift; path = iOSDFULibrary/Classes/Implementation/LegacyDFU/Characteristics/DFUControlPoint.swift; sourceTree = "<group>"; };
+		BC4ED81D5A1157A4CE9073375E9BA60B /* LegacyDFUService.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LegacyDFUService.swift; path = iOSDFULibrary/Classes/Implementation/LegacyDFU/Services/LegacyDFUService.swift; sourceTree = "<group>"; };
+		BD607709C6DB424DEEC4193F60192856 /* SoftdeviceBootloaderInfo.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SoftdeviceBootloaderInfo.swift; path = iOSDFULibrary/Classes/Utilities/DFUPackage/Manifest/SoftdeviceBootloaderInfo.swift; sourceTree = "<group>"; };
+		C1D901AA780D482D47459D2C3828C658 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		C36AA3B15C88FBF01117F5B91C504C19 /* ManifestFirmwareInfo.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ManifestFirmwareInfo.swift; path = iOSDFULibrary/Classes/Utilities/DFUPackage/Manifest/ManifestFirmwareInfo.swift; sourceTree = "<group>"; };
+		C64DD01FB9E50EC3F68CA320F5A41393 /* DFUServiceSelector.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DFUServiceSelector.swift; path = iOSDFULibrary/Classes/Implementation/DFUSelector/DFUServiceSelector.swift; sourceTree = "<group>"; };
+		CA69E60C189D56F3268DB597D3FB7E07 /* TTLockGateway.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = TTLockGateway.release.xcconfig; sourceTree = "<group>"; };
+		CE69ADD90B99DD3BE21FD850FBB119C5 /* LoggerDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LoggerDelegate.swift; path = iOSDFULibrary/Classes/Utilities/Logging/LoggerDelegate.swift; sourceTree = "<group>"; };
+		D25A4955E204037A839485D08BCBA537 /* LoggerHelper.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LoggerHelper.swift; path = iOSDFULibrary/Classes/Utilities/Logging/LoggerHelper.swift; sourceTree = "<group>"; };
+		D2CE7E05EF10597FEBCD01325F028A3F /* SecureDFUControlPoint.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SecureDFUControlPoint.swift; path = iOSDFULibrary/Classes/Implementation/SecureDFU/Characteristics/SecureDFUControlPoint.swift; sourceTree = "<group>"; };
+		D7C7DCACDDBA09DDBAEEF827BFA8E778 /* TTLockDFU.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = TTLockDFU.debug.xcconfig; sourceTree = "<group>"; };
+		D904BD1DEFDDA4AC915662368DCADCE1 /* DFUStarterPeripheral.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DFUStarterPeripheral.swift; path = iOSDFULibrary/Classes/Implementation/DFUSelector/DFUStarterPeripheral.swift; sourceTree = "<group>"; };
+		D97E842472B6CAA38E6F00425E666161 /* ZIPFoundation.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = ZIPFoundation.release.xcconfig; sourceTree = "<group>"; };
+		DE23BF698C24887A3B61AFE9215E4143 /* Data.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Data.swift; path = iOSDFULibrary/Classes/Utilities/Data.swift; sourceTree = "<group>"; };
+		E06E1899BB713BC1B3088E9B179BB3D4 /* Data+Compression.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Data+Compression.swift"; path = "Sources/ZIPFoundation/Data+Compression.swift"; sourceTree = "<group>"; };
+		E56F678A370CCBA1647DAD9818E1178A /* Pods-TTLockTest-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-TTLockTest-frameworks.sh"; sourceTree = "<group>"; };
+		E92938306DD9BA7D7AD45A0DAF09250A /* Pods-TTLockTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TTLockTest.release.xcconfig"; sourceTree = "<group>"; };
+		F211E052E5A60B65BC9A3D5D5399E316 /* DFUStreamZip.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DFUStreamZip.swift; path = iOSDFULibrary/Classes/Utilities/Streams/DFUStreamZip.swift; sourceTree = "<group>"; };
+		F4109F049C555925B743553A53AC1ADA /* Pods-TTLockTest-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-TTLockTest-acknowledgements.plist"; sourceTree = "<group>"; };
+		F740E88F543D9E3FAFB9772B0A211775 /* DFUStreamHex.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DFUStreamHex.swift; path = iOSDFULibrary/Classes/Utilities/Streams/DFUStreamHex.swift; sourceTree = "<group>"; };
+		F7D5D7B684A36783CE9EB6EE0C3D3B9E /* ZIPFoundation-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ZIPFoundation-Info.plist"; sourceTree = "<group>"; };
+		F8D6E492EB3FDDB4AAE1598EA8D1A34B /* DFUServiceDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DFUServiceDelegate.swift; path = iOSDFULibrary/Classes/Implementation/DFUServiceDelegate.swift; sourceTree = "<group>"; };
+		FB1D03FB03DF7572FA4230AABBD4F421 /* Pods-TTLockTest-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-TTLockTest-Info.plist"; sourceTree = "<group>"; };
+		FC27E069DF92B6E554E364895E5832A5 /* DFUServiceInitiator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DFUServiceInitiator.swift; path = iOSDFULibrary/Classes/Implementation/DFUServiceInitiator.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		555F4FFB01DFEC413798DC52C06E6572 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				424630D483F72393DF235A8B432D7F76 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		95FC887E70375F79456C596E1D2C4EC9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				481B5A837AEE7381028862E2DB271783 /* Foundation.framework in Frameworks */,
+				385F543E58054FCC2180E6DFBED4AA35 /* ZIPFoundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DD7049F33B60B847C3E4D32D4552BDFA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				374C10097D335A3DD1274EC9B37F5B6A /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		033ECB7CD8B0625811E22B29F68C5FAA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3D55A22413DFC1D0635D68C2F1D2CDC1 /* TTLock.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		1FAD6F28FAA59A1A3EA173DBBE3484EF /* TTLockGateway */ = {
+			isa = PBXGroup;
+			children = (
+				61AC0FC14F9B3005D0C0646900711C4E /* Frameworks */,
+				AD1317AE3983C23F8EC037D9F7203065 /* Support Files */,
+			);
+			name = TTLockGateway;
+			path = TTLockGateway;
+			sourceTree = "<group>";
+		};
+		208098F80B4AA442BE646404530D4E19 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				21B1375088A0310C7AE2BE4C8188D12F /* iOSDFULibrary.framework */,
+				053A0609188F566539D1EEBE05426D7B /* Pods_TTLockTest.framework */,
+				48A4A6EDC08C8AC933D0DCD507E9D173 /* ZIPFoundation.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		31661ADEC83D97965C1B9DBE74FDD3E8 /* TTLockDFU */ = {
+			isa = PBXGroup;
+			children = (
+				63C50D73704A11F2863D06B6B3C373F2 /* Frameworks */,
+				BE280EA20176565C6F3009CA63615591 /* Support Files */,
+			);
+			name = TTLockDFU;
+			path = TTLockDFU;
+			sourceTree = "<group>";
+		};
+		3D80A1D8259BB2395E9840F57AFE7F74 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				C1D901AA780D482D47459D2C3828C658 /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		4D2C317CDF1358FACFD3573E196A71C8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5ACB827D79A4558F979CA1F5CDBD95B4 /* ZIPFoundation.framework */,
+				3D80A1D8259BB2395E9840F57AFE7F74 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		54FE14228F5F3E860E21F1C12FC055E3 /* Pods-TTLockTest */ = {
+			isa = PBXGroup;
+			children = (
+				7C0FE407A97AD37147BDEE624DF189FA /* Pods-TTLockTest.modulemap */,
+				0EF4505A17238C97FA7F483C9F1E42FC /* Pods-TTLockTest-acknowledgements.markdown */,
+				F4109F049C555925B743553A53AC1ADA /* Pods-TTLockTest-acknowledgements.plist */,
+				32081C883EB514E3368F50AD98904DE2 /* Pods-TTLockTest-dummy.m */,
+				E56F678A370CCBA1647DAD9818E1178A /* Pods-TTLockTest-frameworks.sh */,
+				FB1D03FB03DF7572FA4230AABBD4F421 /* Pods-TTLockTest-Info.plist */,
+				5D503543C1B27A4DFF6E79D276C4C2A0 /* Pods-TTLockTest-umbrella.h */,
+				17700F417ADB50407281638E8BA91254 /* Pods-TTLockTest.debug.xcconfig */,
+				E92938306DD9BA7D7AD45A0DAF09250A /* Pods-TTLockTest.release.xcconfig */,
+			);
+			name = "Pods-TTLockTest";
+			path = "Target Support Files/Pods-TTLockTest";
+			sourceTree = "<group>";
+		};
+		550EE43966E5D11D8A8A5AEE23329BD9 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F9197B55DBAD410EDE4DC3727D42FCFE /* iOSDFULibrary */,
+				EC52A636F471354C472034C6112E80E9 /* TTLock */,
+				31661ADEC83D97965C1B9DBE74FDD3E8 /* TTLockDFU */,
+				1FAD6F28FAA59A1A3EA173DBBE3484EF /* TTLockGateway */,
+				6DC15DF983AB539C8BFFBD9C57CB208B /* ZIPFoundation */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		61AC0FC14F9B3005D0C0646900711C4E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				07A60A94C3DC2E3531B0F7335F7C888A /* TTLockGateway.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		63C50D73704A11F2863D06B6B3C373F2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				71B4D7BA459DB4D69959D9D9034D758C /* TTLockDFU.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		6DC15DF983AB539C8BFFBD9C57CB208B /* ZIPFoundation */ = {
+			isa = PBXGroup;
+			children = (
+				51443A992F52FCCF25525BE4E19956B7 /* Archive.swift */,
+				5985C6BCCBD40B4806F9E26D3DAADC7E /* Archive+Reading.swift */,
+				B7C4E7F75F4B215C8DE93F3D1032C1EC /* Archive+Writing.swift */,
+				E06E1899BB713BC1B3088E9B179BB3D4 /* Data+Compression.swift */,
+				B0F5B9C2BAC3828AE5EEC95ED7F4361B /* Data+Serialization.swift */,
+				94C1827874F57C3DEE3F522B9F14FD7D /* Entry.swift */,
+				7D92D7F471D71B9C83C044BF15A0B12F /* FileManager+ZIP.swift */,
+				7EC069FAEBB14651646A61D45F67A281 /* Support Files */,
+			);
+			name = ZIPFoundation;
+			path = ZIPFoundation;
+			sourceTree = "<group>";
+		};
+		776568AD62B0E8370537EDDD826ED5F0 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				7EDD3213F4AFA0B842131A0127F023EF /* iOSDFULibrary.modulemap */,
+				0C4728402EBE64781565603C8BAB3382 /* iOSDFULibrary-dummy.m */,
+				6165CC5908CC645B8030835881AAB8A6 /* iOSDFULibrary-Info.plist */,
+				2A7A86651FB8522D131DD1F3AC14F84B /* iOSDFULibrary-prefix.pch */,
+				0A084B1F4B8AF7DDCE04ECAC36AE07A2 /* iOSDFULibrary-umbrella.h */,
+				996425FE603AA7F6DA8C71059A2B1122 /* iOSDFULibrary.debug.xcconfig */,
+				8F65884AB56DF6AD64084AB345AC7840 /* iOSDFULibrary.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/iOSDFULibrary";
+			sourceTree = "<group>";
+		};
+		7EC069FAEBB14651646A61D45F67A281 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				29EF1F2FE9EEC59AE9A267AE5F3C6BB3 /* ZIPFoundation.modulemap */,
+				B974452DF1D6D3AB0CE29947E23EE100 /* ZIPFoundation-dummy.m */,
+				F7D5D7B684A36783CE9EB6EE0C3D3B9E /* ZIPFoundation-Info.plist */,
+				3765DD80CF977ACCBFC9602C4A46D309 /* ZIPFoundation-prefix.pch */,
+				25F9D9316CD70909FDA4540A514563C1 /* ZIPFoundation-umbrella.h */,
+				99245A603D2E624D0D26EA034B7BAAC9 /* ZIPFoundation.debug.xcconfig */,
+				D97E842472B6CAA38E6F00425E666161 /* ZIPFoundation.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/ZIPFoundation";
+			sourceTree = "<group>";
+		};
+		A0FF3D56C8298B9EDE56A333D0F9A653 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				16F8936A23F86344CBF47C45D2B2F7F4 /* TTLock.debug.xcconfig */,
+				A38B06342A32795C41071925E3E58386 /* TTLock.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/TTLock";
+			sourceTree = "<group>";
+		};
+		AD1317AE3983C23F8EC037D9F7203065 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				98E6F41EFDB7FF8CA8D19C20CE96FFED /* TTLockGateway.debug.xcconfig */,
+				CA69E60C189D56F3268DB597D3FB7E07 /* TTLockGateway.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/TTLockGateway";
+			sourceTree = "<group>";
+		};
+		BE280EA20176565C6F3009CA63615591 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				D7C7DCACDDBA09DDBAEEF827BFA8E778 /* TTLockDFU.debug.xcconfig */,
+				24DAE374374862A4A37ECA7DE1EE2168 /* TTLockDFU.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/TTLockDFU";
+			sourceTree = "<group>";
+		};
+		CF1408CF629C7361332E53B88F7BD30C = {
+			isa = PBXGroup;
+			children = (
+				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
+				4D2C317CDF1358FACFD3573E196A71C8 /* Frameworks */,
+				550EE43966E5D11D8A8A5AEE23329BD9 /* Pods */,
+				208098F80B4AA442BE646404530D4E19 /* Products */,
+				E91F9EF38E163F1DCAC9BD9E9E7BD3DC /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		E91F9EF38E163F1DCAC9BD9E9E7BD3DC /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				54FE14228F5F3E860E21F1C12FC055E3 /* Pods-TTLockTest */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		EC52A636F471354C472034C6112E80E9 /* TTLock */ = {
+			isa = PBXGroup;
+			children = (
+				033ECB7CD8B0625811E22B29F68C5FAA /* Frameworks */,
+				A0FF3D56C8298B9EDE56A333D0F9A653 /* Support Files */,
+			);
+			name = TTLock;
+			path = TTLock;
+			sourceTree = "<group>";
+		};
+		F9197B55DBAD410EDE4DC3727D42FCFE /* iOSDFULibrary */ = {
+			isa = PBXGroup;
+			children = (
+				BACA9DCD5026224CF83E6145BA4055A4 /* ButtonlessDFU.swift */,
+				97259A9F82F1FB135FDBDAED05808E02 /* crc32.swift */,
+				DE23BF698C24887A3B61AFE9215E4143 /* Data.swift */,
+				A9271A1AA0CB11B701B0342D874180CE /* DFUCharacteristic.swift */,
+				4C7F1618552F435030BB340A785BAB7E /* DFUController.swift */,
+				BB68B1ADAD67973000DEC2C7F1F14070 /* DFUControlPoint.swift */,
+				9EEA89B86FCDA99A155AF6F845DC9652 /* DFUExecutor.swift */,
+				7B1626C4E33F6DFDBCB1E4BED555873B /* DFUFirmware.swift */,
+				B1767944A03AA09F7BAFC1188A2C41D9 /* DFUPacket.swift */,
+				7D06AC11391B863B61FA98BF761F171C /* DFUPeripheral.swift */,
+				0D26CA87736176D229038BCEC3A9D760 /* DFUPeripheralDelegate.swift */,
+				891749F934770CDB4914573F6CE4B903 /* DFUPeripheralSelector.swift */,
+				10859382374E6EB70144832CDF8AEC19 /* DFUPeripheralSelectorDelegate.swift */,
+				B552A1B8E359752332330C05EA27F5CD /* DFUService.swift */,
+				09FEAB598EEAA34DB35B1325BCB1D3B7 /* DFUServiceController.swift */,
+				F8D6E492EB3FDDB4AAE1598EA8D1A34B /* DFUServiceDelegate.swift */,
+				FC27E069DF92B6E554E364895E5832A5 /* DFUServiceInitiator.swift */,
+				C64DD01FB9E50EC3F68CA320F5A41393 /* DFUServiceSelector.swift */,
+				D904BD1DEFDDA4AC915662368DCADCE1 /* DFUStarterPeripheral.swift */,
+				101D6EB5F7CCF58C8BFB1B6F3BBA9F43 /* DFUStream.swift */,
+				9C55188A35B1967F53C42936AD0C427C /* DFUStreamBin.swift */,
+				F740E88F543D9E3FAFB9772B0A211775 /* DFUStreamHex.swift */,
+				F211E052E5A60B65BC9A3D5D5399E316 /* DFUStreamZip.swift */,
+				714169AAA9994DDCC25EF204C8A199E9 /* DFUUuidHelper.swift */,
+				2BAD4B1CE4C9F27353112F6C02B727AC /* DFUVersion.swift */,
+				71DBE3B7B78B0D26DBC153535DE1F053 /* Double.swift */,
+				43EE6B70C02230038A301983815DD6B9 /* IntelHex2BinConverter.h */,
+				674339360A4D9400B37F6B1996AFE8D3 /* IntelHex2BinConverter.m */,
+				3FA48CEBD8D20DEF6C8DD0EF26C75EEC /* LegacyDFUExecutor.swift */,
+				5A2F5352EF4D761F5A2AA2D0F8CD42C4 /* LegacyDFUPeripheral.swift */,
+				1F777D97C1497A07ADDCC5CDCA134B9D /* LegacyDFUPeripheralDelegate.swift */,
+				BC4ED81D5A1157A4CE9073375E9BA60B /* LegacyDFUService.swift */,
+				176BC269D4DEA679B33FEE26098EEDA4 /* LegacyDFUServiceInitiator.swift */,
+				CE69ADD90B99DD3BE21FD850FBB119C5 /* LoggerDelegate.swift */,
+				D25A4955E204037A839485D08BCBA537 /* LoggerHelper.swift */,
+				0601D99021B8E1268B79EF139625AB8F /* Manifest.swift */,
+				C36AA3B15C88FBF01117F5B91C504C19 /* ManifestFirmwareInfo.swift */,
+				D2CE7E05EF10597FEBCD01325F028A3F /* SecureDFUControlPoint.swift */,
+				93C6A61FA88561D5BC35BB68FC65813B /* SecureDFUExecutor.swift */,
+				78C94289DEB3139985389BF53A9D7DDC /* SecureDFUPacket.swift */,
+				96AEDFC1FD10396F2303CB4C0F606F56 /* SecureDFUPeripheral.swift */,
+				51E6D2719920AD54780B7078418E3CBF /* SecureDFUPeripheralDelegate.swift */,
+				44DDB871C2C775D61D5F30236CC56672 /* SecureDFUService.swift */,
+				101A780AD17343282678180836A7C3F0 /* SecureDFUServiceInitiator.swift */,
+				BD607709C6DB424DEEC4193F60192856 /* SoftdeviceBootloaderInfo.swift */,
+				87E5075F808FE2FDBB136137F7B580AA /* ZipArchive.swift */,
+				776568AD62B0E8370537EDDD826ED5F0 /* Support Files */,
+			);
+			name = iOSDFULibrary;
+			path = iOSDFULibrary;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		0D091D9FDF176628389C65DB9C9362F6 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BE2724E8C0ED6C2DE3840CDE5D7E7265 /* Pods-TTLockTest-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B4C48E6AC77117A4860C77B351EED447 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				62C050783AE9FC654AB2FA7FCE84BEBA /* IntelHex2BinConverter.h in Headers */,
+				D1ADC22EBBEC51760F1F587F10A0EA8C /* iOSDFULibrary-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F3B7DC27D71685E4573B8A4FF0235FF4 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5198E50B343D23609D8856664388D368 /* ZIPFoundation-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		4B1A21D75A386ADF6C965FB5883D6BE0 /* Pods-TTLockTest */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2DEC58214515AAC767F40BCDBEEA6078 /* Build configuration list for PBXNativeTarget "Pods-TTLockTest" */;
+			buildPhases = (
+				0D091D9FDF176628389C65DB9C9362F6 /* Headers */,
+				6382136CC6C41AD7C5009A8D73C0D484 /* Sources */,
+				DD7049F33B60B847C3E4D32D4552BDFA /* Frameworks */,
+				7AC551958C27C6A073A2C5870BEEE2A3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0DB12060139142186F53448FD9A6F9B1 /* PBXTargetDependency */,
+				39153FB758E9AA13F0780EEFB24D7009 /* PBXTargetDependency */,
+				66C192C5489F66683E3669F9CCE71856 /* PBXTargetDependency */,
+				ECDE552EAF2348C4DC71EB98DA5C0AF7 /* PBXTargetDependency */,
+				A9FAD9499093CC1C2B00FA2DFC135FF4 /* PBXTargetDependency */,
+			);
+			name = "Pods-TTLockTest";
+			productName = "Pods-TTLockTest";
+			productReference = 053A0609188F566539D1EEBE05426D7B /* Pods_TTLockTest.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		9506C7FCDAE6E6967A99655F452EEE93 /* iOSDFULibrary */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 590425E90D5C312FE28E4C93B476AC89 /* Build configuration list for PBXNativeTarget "iOSDFULibrary" */;
+			buildPhases = (
+				B4C48E6AC77117A4860C77B351EED447 /* Headers */,
+				46B86D21818A82DA1C3E9352C96B9B55 /* Sources */,
+				95FC887E70375F79456C596E1D2C4EC9 /* Frameworks */,
+				DE4A44EC86E5E582441034183191AAC6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CC43D3F9846CA92A785AB64382202346 /* PBXTargetDependency */,
+			);
+			name = iOSDFULibrary;
+			productName = iOSDFULibrary;
+			productReference = 21B1375088A0310C7AE2BE4C8188D12F /* iOSDFULibrary.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		AA15C8469D67684160CC2A7098EB841C /* ZIPFoundation */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 918673BDAB92E9E841BB2BC943397FB8 /* Build configuration list for PBXNativeTarget "ZIPFoundation" */;
+			buildPhases = (
+				F3B7DC27D71685E4573B8A4FF0235FF4 /* Headers */,
+				D498D6BAA92B7B7EF35AE538E25DC85F /* Sources */,
+				555F4FFB01DFEC413798DC52C06E6572 /* Frameworks */,
+				AFDF3A0FCC19604DE42390DD2CDDE79E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ZIPFoundation;
+			productName = ZIPFoundation;
+			productReference = 48A4A6EDC08C8AC933D0DCD507E9D173 /* ZIPFoundation.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BFDFE7DC352907FC980B868725387E98 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1100;
+				LastUpgradeCheck = 1100;
+			};
+			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
+			productRefGroup = 208098F80B4AA442BE646404530D4E19 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				9506C7FCDAE6E6967A99655F452EEE93 /* iOSDFULibrary */,
+				4B1A21D75A386ADF6C965FB5883D6BE0 /* Pods-TTLockTest */,
+				4F7A0364FB6F5FA593A14A7B501F0CA7 /* TTLock */,
+				B0FBA311DF80A71D26255035CD6DECCE /* TTLockDFU */,
+				385CF08F4762A2AB188DA5D978366706 /* TTLockGateway */,
+				AA15C8469D67684160CC2A7098EB841C /* ZIPFoundation */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		7AC551958C27C6A073A2C5870BEEE2A3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AFDF3A0FCC19604DE42390DD2CDDE79E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DE4A44EC86E5E582441034183191AAC6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		46B86D21818A82DA1C3E9352C96B9B55 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				89CBEE8E3F8423378066F52A8CEB1465 /* ButtonlessDFU.swift in Sources */,
+				53CDC9B11AE11A18D5595CA29AD88FD7 /* crc32.swift in Sources */,
+				A846A5D762C13B73F2E001317DF1257F /* Data.swift in Sources */,
+				157750DD797753253192113C1C3B70EA /* DFUCharacteristic.swift in Sources */,
+				5E22189B30F340CD4A1B231627D8428F /* DFUController.swift in Sources */,
+				F21EF813D2A8F2CEEAADFC6B40C15C1A /* DFUControlPoint.swift in Sources */,
+				9715FADED3A8399212B2C2C47C626209 /* DFUExecutor.swift in Sources */,
+				E1A03A005F01190807BA3CCD862BD2B0 /* DFUFirmware.swift in Sources */,
+				8D31BCC84301263D921E4EDC0C8B9DF9 /* DFUPacket.swift in Sources */,
+				F0F40F6EF75B6CA13B5483136E764114 /* DFUPeripheral.swift in Sources */,
+				DFA66F0E0E99A421C7283F0F3D0CA422 /* DFUPeripheralDelegate.swift in Sources */,
+				F48E5712CD324A9CB62F7A4CD0D7E70E /* DFUPeripheralSelector.swift in Sources */,
+				F1836A31D73C2B0DBF52DBEE34E4DD45 /* DFUPeripheralSelectorDelegate.swift in Sources */,
+				ADB342F309ABEF60B5D1901333CB1E74 /* DFUService.swift in Sources */,
+				2DE48E98690CE04A38A2E7FFC008AFA1 /* DFUServiceController.swift in Sources */,
+				AEDA5B3E9C45E08E1D5832ACD17F00F0 /* DFUServiceDelegate.swift in Sources */,
+				11AE01D6D2EF46CE1733F2ED56AC8D67 /* DFUServiceInitiator.swift in Sources */,
+				DFF190177FB5802B0E49034058D75DF9 /* DFUServiceSelector.swift in Sources */,
+				B69BB3C6EEF537AA02600EE84630A193 /* DFUStarterPeripheral.swift in Sources */,
+				4E58FAACBB5E0F5F262AA6DB99986AC5 /* DFUStream.swift in Sources */,
+				4520347DF857FCC71634485158F2509E /* DFUStreamBin.swift in Sources */,
+				2CEA4C92CD32A77DD26F5BE5B970FD74 /* DFUStreamHex.swift in Sources */,
+				0734EB3B977FC45EC8EA2CA53442072B /* DFUStreamZip.swift in Sources */,
+				AD7772F4E3037E5D82462177CF4C4F4B /* DFUUuidHelper.swift in Sources */,
+				318637D031E0E7C749D98FA47E0E31CC /* DFUVersion.swift in Sources */,
+				0FE97B353A93B3CE22EDA6AECCC0346D /* Double.swift in Sources */,
+				7D715D8E210AE4B2BDADA399DC533AE3 /* IntelHex2BinConverter.m in Sources */,
+				FDE1874AF6EB7678BBE6770BBDE5CB1F /* iOSDFULibrary-dummy.m in Sources */,
+				241D8F56443833A289DEACF772B1F871 /* LegacyDFUExecutor.swift in Sources */,
+				3ACB5C8D793557136C8AA1A4656551ED /* LegacyDFUPeripheral.swift in Sources */,
+				04277B42919182C09B68EAA05C91DCF7 /* LegacyDFUPeripheralDelegate.swift in Sources */,
+				14BAF4EB910A24E9484FD10AF0A4A3ED /* LegacyDFUService.swift in Sources */,
+				41DE26345FC99F2B85890E45899B0C93 /* LegacyDFUServiceInitiator.swift in Sources */,
+				B471A7CD166E80B60D96881815DF6D44 /* LoggerDelegate.swift in Sources */,
+				D901B3258F5F9665D481A3CA4B6A1CC7 /* LoggerHelper.swift in Sources */,
+				51454BE424498D96A82ACC3649CFA217 /* Manifest.swift in Sources */,
+				B253682649DF63773092631BA508083B /* ManifestFirmwareInfo.swift in Sources */,
+				F14FE3E202F0F171955AE16CCFA213E6 /* SecureDFUControlPoint.swift in Sources */,
+				9E916C0552800996D5FD7487C4578B9C /* SecureDFUExecutor.swift in Sources */,
+				3EB2FF059F4E92FF1BE0FF159FA6CDA0 /* SecureDFUPacket.swift in Sources */,
+				25843BA23E68CB754449EF08A3FDB92E /* SecureDFUPeripheral.swift in Sources */,
+				2809DA2C596EAF158CF5D4BE3B796E6E /* SecureDFUPeripheralDelegate.swift in Sources */,
+				73F4C96F66AE390C3137D8FA0BB3654A /* SecureDFUService.swift in Sources */,
+				5E89A2E4FE41E0EE9BA4A231C69A90AD /* SecureDFUServiceInitiator.swift in Sources */,
+				BDD5A48BA4CD7C083CFD2939FAAF2934 /* SoftdeviceBootloaderInfo.swift in Sources */,
+				B12BA8AF195AA250BC1BBCD528BB774E /* ZipArchive.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6382136CC6C41AD7C5009A8D73C0D484 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				11A2B3A102A61971545E4D1AAFFC80B0 /* Pods-TTLockTest-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D498D6BAA92B7B7EF35AE538E25DC85F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				52B7D3BB8833369CA20DD8A27C147210 /* Archive+Reading.swift in Sources */,
+				FE5E7F7C9D43D8F6795EC71DB0F3FC93 /* Archive+Writing.swift in Sources */,
+				496D6CC78ED6FC552374A9FC20166F7D /* Archive.swift in Sources */,
+				FA50F624F213960911CC71221CD95F06 /* Data+Compression.swift in Sources */,
+				17EE94555F96AFD6016F0396A5C73B6A /* Data+Serialization.swift in Sources */,
+				7CDADD41594A4ABD69C12F00970295E0 /* Entry.swift in Sources */,
+				65C43BF06212C97ADC1F489978BF33E3 /* FileManager+ZIP.swift in Sources */,
+				358B27D243FF5B232BF15E833779961D /* ZIPFoundation-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		0DB12060139142186F53448FD9A6F9B1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = TTLock;
+			target = 4F7A0364FB6F5FA593A14A7B501F0CA7 /* TTLock */;
+			targetProxy = 4CC78CC7CF6B7A82A8F836374E5C35A1 /* PBXContainerItemProxy */;
+		};
+		39153FB758E9AA13F0780EEFB24D7009 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = TTLockDFU;
+			target = B0FBA311DF80A71D26255035CD6DECCE /* TTLockDFU */;
+			targetProxy = 65D9E40569F5A76309CC825AE01C5A82 /* PBXContainerItemProxy */;
+		};
+		66C192C5489F66683E3669F9CCE71856 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = TTLockGateway;
+			target = 385CF08F4762A2AB188DA5D978366706 /* TTLockGateway */;
+			targetProxy = 2615629C667B748FB71999D79410E04C /* PBXContainerItemProxy */;
+		};
+		7942C4DB0D851C42D0ED120BE678BDBE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = iOSDFULibrary;
+			target = 9506C7FCDAE6E6967A99655F452EEE93 /* iOSDFULibrary */;
+			targetProxy = C7D5D31D0E911F83EB97B561697E7440 /* PBXContainerItemProxy */;
+		};
+		A9FAD9499093CC1C2B00FA2DFC135FF4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = iOSDFULibrary;
+			target = 9506C7FCDAE6E6967A99655F452EEE93 /* iOSDFULibrary */;
+			targetProxy = 68FCF9EB7A983118B6516B8F616E151D /* PBXContainerItemProxy */;
+		};
+		AEA16DE082D081C3F073D8A1111794C4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = TTLock;
+			target = 4F7A0364FB6F5FA593A14A7B501F0CA7 /* TTLock */;
+			targetProxy = 7350FE4A1E721E30CB5444E56844823E /* PBXContainerItemProxy */;
+		};
+		CC43D3F9846CA92A785AB64382202346 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = ZIPFoundation;
+			target = AA15C8469D67684160CC2A7098EB841C /* ZIPFoundation */;
+			targetProxy = E2146C7CDD6D284D06AD96E9FD0AF50F /* PBXContainerItemProxy */;
+		};
+		ECDE552EAF2348C4DC71EB98DA5C0AF7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = ZIPFoundation;
+			target = AA15C8469D67684160CC2A7098EB841C /* ZIPFoundation */;
+			targetProxy = 84CA9CEBBE6E9EB3D891C62B9D6B258C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		154DEBC0A11FE79215986B1AD5BBB2A1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D97E842472B6CAA38E6F00425E666161 /* ZIPFoundation.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/ZIPFoundation/ZIPFoundation-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/ZIPFoundation/ZIPFoundation-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/ZIPFoundation/ZIPFoundation.modulemap";
+				PRODUCT_MODULE_NAME = ZIPFoundation;
+				PRODUCT_NAME = ZIPFoundation;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		29B2F387D613D2EC1EAEA0157C5ABA4E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 99245A603D2E624D0D26EA034B7BAAC9 /* ZIPFoundation.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/ZIPFoundation/ZIPFoundation-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/ZIPFoundation/ZIPFoundation-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/ZIPFoundation/ZIPFoundation.modulemap";
+				PRODUCT_MODULE_NAME = ZIPFoundation;
+				PRODUCT_NAME = ZIPFoundation;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		2EFADC7BB353A37473CC56766960BD22 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 996425FE603AA7F6DA8C71059A2B1122 /* iOSDFULibrary.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/iOSDFULibrary/iOSDFULibrary-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/iOSDFULibrary/iOSDFULibrary-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/iOSDFULibrary/iOSDFULibrary.modulemap";
+				PRODUCT_MODULE_NAME = iOSDFULibrary;
+				PRODUCT_NAME = iOSDFULibrary;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		33619EF835C8E9B48E7641B1962FE423 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 16F8936A23F86344CBF47C45D2B2F7F4 /* TTLock.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		35A08D7873971748EE108263F4BA7635 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E92938306DD9BA7D7AD45A0DAF09250A /* Pods-TTLockTest.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-TTLockTest/Pods-TTLockTest-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-TTLockTest/Pods-TTLockTest.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		4721A0F2AE1ABA30C061605AAD17851C /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8F65884AB56DF6AD64084AB345AC7840 /* iOSDFULibrary.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/iOSDFULibrary/iOSDFULibrary-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/iOSDFULibrary/iOSDFULibrary-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/iOSDFULibrary/iOSDFULibrary.modulemap";
+				PRODUCT_MODULE_NAME = iOSDFULibrary;
+				PRODUCT_NAME = iOSDFULibrary;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		716F3A9441FA23BCE759656C440BA15B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D7C7DCACDDBA09DDBAEEF827BFA8E778 /* TTLockDFU.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		791CC5FD972B03C843F32AEDA4880BA2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 24DAE374374862A4A37ECA7DE1EE2168 /* TTLockDFU.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		B7275B0905071B5F2957FBAFCD484527 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 17700F417ADB50407281638E8BA91254 /* Pods-TTLockTest.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-TTLockTest/Pods-TTLockTest-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-TTLockTest/Pods-TTLockTest.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		BC01E0B73776AF6B58DC318A9BE988D7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		C16D09AD10C7A951558F5BC78D1FDCFD /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A38B06342A32795C41071925E3E58386 /* TTLock.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C605C363CC9F26F9FF97DBB1D5C6E25C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+		D2C5DC423F5415141324CE2429FBE1F4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CA69E60C189D56F3268DB597D3FB7E07 /* TTLockGateway.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		DB56D948C6EFA3C870CF898EB64F8C34 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 98E6F41EFDB7FF8CA8D19C20CE96FFED /* TTLockGateway.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		06C4E713DB6DFAAF9F84C5DBDE1DB6B3 /* Build configuration list for PBXAggregateTarget "TTLockDFU" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				716F3A9441FA23BCE759656C440BA15B /* Debug */,
+				791CC5FD972B03C843F32AEDA4880BA2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2DEC58214515AAC767F40BCDBEEA6078 /* Build configuration list for PBXNativeTarget "Pods-TTLockTest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B7275B0905071B5F2957FBAFCD484527 /* Debug */,
+				35A08D7873971748EE108263F4BA7635 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		330941B3A0E504B6076697A5EC88E12A /* Build configuration list for PBXAggregateTarget "TTLock" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				33619EF835C8E9B48E7641B1962FE423 /* Debug */,
+				C16D09AD10C7A951558F5BC78D1FDCFD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BC01E0B73776AF6B58DC318A9BE988D7 /* Debug */,
+				C605C363CC9F26F9FF97DBB1D5C6E25C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		590425E90D5C312FE28E4C93B476AC89 /* Build configuration list for PBXNativeTarget "iOSDFULibrary" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2EFADC7BB353A37473CC56766960BD22 /* Debug */,
+				4721A0F2AE1ABA30C061605AAD17851C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6564A5311DA80E78D43B74D086FFC620 /* Build configuration list for PBXAggregateTarget "TTLockGateway" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DB56D948C6EFA3C870CF898EB64F8C34 /* Debug */,
+				D2C5DC423F5415141324CE2429FBE1F4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		918673BDAB92E9E841BB2BC943397FB8 /* Build configuration list for PBXNativeTarget "ZIPFoundation" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				29B2F387D613D2EC1EAEA0157C5ABA4E /* Debug */,
+				154DEBC0A11FE79215986B1AD5BBB2A1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+}
